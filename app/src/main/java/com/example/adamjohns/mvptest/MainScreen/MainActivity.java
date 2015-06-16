@@ -1,9 +1,11 @@
-package com.example.adamjohns.mvptest;
+package com.example.adamjohns.mvptest.MainScreen;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.adamjohns.mvptest.R;
 
 public class MainActivity extends ActionBarActivity implements MainView {
 

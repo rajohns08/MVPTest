@@ -1,4 +1,4 @@
-package com.example.adamjohns.mvptest;
+package com.example.adamjohns.mvptest.MainScreen;
 
 public interface OnDataRetrievedListener {
 

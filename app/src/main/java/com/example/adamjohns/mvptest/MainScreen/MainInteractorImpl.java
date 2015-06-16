@@ -1,4 +1,4 @@
-package com.example.adamjohns.mvptest;
+package com.example.adamjohns.mvptest.MainScreen;
 
 import com.example.adamjohns.mvptest.Retrofit.RestManager;
 import com.google.gson.JsonElement;
