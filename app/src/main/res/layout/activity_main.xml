@@ -6,7 +6,7 @@
                 tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/helloTextView"
+        android:id="@+id/dataTextView"
         android:text="@string/no_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,6 +19,7 @@
         android:text="Get Data"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:onClick="getDataButtonTapped"
         />
 
     <TextView

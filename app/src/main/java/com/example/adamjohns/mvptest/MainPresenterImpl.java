@@ -1,16 +1,36 @@
 package com.example.adamjohns.mvptest;
 
-import android.util.Log;
+public class MainPresenterImpl implements MainPresenter, OnDataRetrievedListener {
 
-/**
- * Created by adamjohns on 6/11/15.
- *
- */
-public class MainPresenterImpl implements MainPresenter{
+    private MainView mainView;
+    private MainInteractor mainInteractor;
+
+    public MainPresenterImpl(MainView mainView) {
+        this.mainView = mainView;
+        this.mainInteractor = new MainInteractorImpl();
+    }
+
+    // MainPresenter Overrides
 
     @Override
-    public void getData() {
-        Log.d("tagzzz", "get the data");
+    public void getDataFromInteractor() {
+        mainView.showProgress();
+        mainView.updateDataLabel("");
+        mainInteractor.getData(this);
+    }
+
+    // OnDataRetrievedListener Overrides
+
+    @Override
+    public void onSuccess(String data) {
+        mainView.hideProgress();
+        mainView.updateDataLabel(data);
+    }
+
+    @Override
+    public void onFailure() {
+        mainView.hideProgress();
+        mainView.updateDataLabel("An error occurred.");
     }
 
 }
