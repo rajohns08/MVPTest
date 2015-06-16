@@ -11,6 +11,8 @@ public class MainActivity extends ActionBarActivity implements MainView {
     private TextView dataText;
     private MainPresenter mainPresenter;
 
+    // Activity Overrides
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,8 @@ public class MainActivity extends ActionBarActivity implements MainView {
 
         mainPresenter = new MainPresenterImpl(this);
     }
+
+    // MainView Overrides
 
     @Override
     public void showProgress() {
@@ -36,6 +40,8 @@ public class MainActivity extends ActionBarActivity implements MainView {
     public void updateDataLabel(String data) {
         dataText.setText(data);
     }
+
+    // XML Actions
 
     public void getDataButtonTapped(View v) {
         mainPresenter.getDataFromInteractor();
