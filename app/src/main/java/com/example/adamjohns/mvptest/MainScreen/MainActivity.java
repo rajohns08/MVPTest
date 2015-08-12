@@ -12,6 +12,7 @@ public class MainActivity extends ActionBarActivity implements MainView {
     private TextView loadingText;
     private TextView dataText;
     private MainPresenter mainPresenter;
+    private MainInteractor mainInteractor = new MainInteractorImpl();
 
     // Activity Overrides
 
@@ -23,7 +24,7 @@ public class MainActivity extends ActionBarActivity implements MainView {
         loadingText = (TextView)findViewById(R.id.loadingText);
         dataText = (TextView)findViewById(R.id.dataTextView);
 
-        mainPresenter = new MainPresenterImpl(this);
+        mainPresenter = new MainPresenterImpl(this, mainInteractor);
     }
 
     // MainView Overrides

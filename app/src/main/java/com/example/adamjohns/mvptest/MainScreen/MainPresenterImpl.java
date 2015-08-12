@@ -5,9 +5,9 @@ public class MainPresenterImpl implements MainPresenter, OnDataRetrievedListener
     private MainView mainView;
     private MainInteractor mainInteractor;
 
-    public MainPresenterImpl(MainView mainView) {
+    public MainPresenterImpl(MainView mainView, MainInteractor mainInteractor) {
         this.mainView = mainView;
-        this.mainInteractor = new MainInteractorImpl();
+        this.mainInteractor = mainInteractor;
     }
 
     // MainPresenter Overrides
